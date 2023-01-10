@@ -1,7 +1,7 @@
 import Header from "./components/Header";
 import Papa from "papaparse";
 import React, { useState, useEffect } from "react";
-import csvFile from "https://cadusd-exchange.s3.us-west-2.amazonaws.com/CADUSD%3DX.csv";
+import csvFile from "./CADUSD=X.csv";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import "bootstrap/dist/css/bootstrap.min.css";
