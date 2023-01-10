@@ -1,23 +1,26 @@
-In the table view, users should be able to see data for the following columns: Date, Open Price, High Price, Low Price, Closing Price, and Adjusted Closing Price. Additionally, the table view should support infinite scrolling and a date range filter, allowing users to view a specific date range or all of the data.
-
-In the charting view, the application should display the Open Price data and allow users to choose between two different chart types: Line chart and Area chart. The application should be compatible with Chrome, Edge, and Firefox browsers.
-
 Loading and parsing the CSV file:
-Used Papaparse to parse the CSV file
+Used Papaparse to parse the CSV file.
 
 Displaying the data in a table:
-1.infinite scrolling: used react-infinite-scroll-component.
+Used react-infinite-scroll-component.
+1.infinite scrolling:
+1.Load the first 100 data
+2.When scroll to the bottom the page, fetch the next 100 rows of data(there is 1500 milliseconds delay)
 2.date range filter:
 
 Displaying the data in a chart:
-Used chart.js and chartjs wrapper for reactjs:react-chartjs-2 .
-Tried to use hook to change fill varialbe to toggle between line chart and area chart.
+Used chart.js and react-chartjs-2.
 
 Create the Filter option for user to pick the date range:
-Create a component that allows user to select date range or choose the view all data.
-When changing the date range , update the data that is being displayed in the table.
+1.When changing the date range , update the data that is being displayed in the table.
+2.View all button set start date and end date to default value and update the data displayed in the table.
 
 Make the application browser compatible:
 Make sure to test the application on Chrome, Edge, and Firefox.
 
 npm install papaparse react-infinite-scroll-component react-bootstrap bootstrap chart.js react-chartjs-2
+
+Test this app
+git clone https://github.com/alex6327/cadusd-exchange.git
+npm install
+npm start

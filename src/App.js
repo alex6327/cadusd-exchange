@@ -17,7 +17,6 @@ const App = () => {
       Papa.parse(csvFile, {
         download: true,
         complete: function (parsedResult) {
-          console.log("papaparse complete");
           resolve(parsedResult.data);
         },
         error: function (error) {
@@ -28,12 +27,9 @@ const App = () => {
   };
 
   useEffect(() => {
-    console.log("useEffect in app.js");
     parseCsv()
       .then((data) => {
-        console.log("useEffect promise then");
         setResult(data);
-        console.log(data);
         setLoading(false);
       })
       .catch((error) => {
@@ -47,7 +43,6 @@ const App = () => {
   //   return null;
   // }
   if (loading) {
-    console.log("loading");
     return <div>Loading...</div>;
   } else {
     return (

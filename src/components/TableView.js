@@ -22,7 +22,6 @@ const TableView = ({ data }) => {
     if (filteredData.length < 100) {
       setHasMore(false);
     }
-    console.log(filteredData);
     setRows(filteredData);
   };
 
