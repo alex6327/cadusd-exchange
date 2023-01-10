@@ -33,6 +33,7 @@ const App = () => {
       .then((data) => {
         console.log("useEffect promise then");
         setResult(data);
+        console.log(data);
         setLoading(false);
       })
       .catch((error) => {
@@ -46,6 +47,7 @@ const App = () => {
   //   return null;
   // }
   if (loading) {
+    console.log("loading");
     return <div>Loading...</div>;
   } else {
     return (
